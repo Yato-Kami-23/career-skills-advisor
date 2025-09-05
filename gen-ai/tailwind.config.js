@@ -23,6 +23,10 @@ export default {
           yellow: "#ffd60a",    // Dark Yellow
         },
       },
+       backgroundImage: {
+        'homepage-gradient': 'linear-gradient(135deg, #ffe3b3 0%, #bde0fe 100%)',
+        'homepage-gradient-dark': 'linear-gradient(135deg, #3c096c 0%, #5a189a 100%)',
+      }
     },
   },
   plugins: [],

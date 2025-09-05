@@ -1,0 +1,25 @@
+/* src/css/HomePage.module.css */
+.homepageGradient {
+    background: linear-gradient(135deg, #ffe3b3 0%, #bde0fe 100%);
+}
+
+.dark .homepageGradient {
+    background: linear-gradient(135deg, #3c096c 0%, #5a189a 100%);
+}
+
+.imagePlaceholder {
+    border: 2px dashed #cdb4db;
+}
+
+.dark .imagePlaceholder {
+    border: 2px dashed #7b2cbf;
+}
+
+.chatbotButtonHover {
+    transition: all 0.3s ease;
+}
+
+.chatbotButtonHover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
