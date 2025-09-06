@@ -1,0 +1,46 @@
+/* src/css/ContactPage.module.css */
+
+/* Work in Progress banner */
+.wipBanner {
+  background: linear-gradient(90deg, #ffe3b3, #ffc8dd, #bde0fe);
+  color: #3c096c;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  animation: slideFade 2s ease-in-out infinite alternate;
+}
+
+:global(.dark) .wipBanner {
+  background: linear-gradient(90deg, #3c096c, #5a189a, #7b2cbf);
+  color: #ffe3b3;
+}
+
+/* Card hover */
+.contactCard {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.contactCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Glow effect for links */
+.glowLink {
+  position: relative;
+  transition: text-shadow 0.3s ease;
+}
+.glowLink:hover {
+  text-shadow: 0 0 8px rgba(255, 230, 120, 0.9);
+}
+
+/* Animation for WIP banner */
+@keyframes slideFade {
+  from {
+    opacity: 0.7;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

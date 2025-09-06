@@ -1,16 +1,22 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import styles from "../css/ContactPage.module.css";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-light-honeymilk text-dark-indigo dark:bg-dark-plum dark:text-light-honeymilk transition-colors duration-500">
+    <div className={`min-h-screen flex flex-col bg-light-honeymilk text-dark-indigo dark:bg-dark-plum dark:text-light-honeymilk transition-colors duration-500`}>
       {/* Navbar */}
       <Navbar />
 
       {/* Contact Section */}
       <main className="flex-grow p-8">
         <section className="max-w-4xl mx-auto text-center">
+          {/* Work in Progress Banner */}
+          <div className={`${styles.wipBanner} mb-8`}>
+            🚧 This page is still a Work in Progress 🚧
+          </div>
+
           <h2 className="text-3xl font-bold mb-6 text-light-dreamy dark:text-dark-orchid">
             Contact Us
           </h2>
@@ -21,18 +27,18 @@ export default function ContactPage() {
 
           {/* Contact Methods */}
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="p-6 rounded-xl shadow-lg bg-light-crystal dark:bg-dark-indigo">
+            <div className={`p-6 rounded-xl shadow-lg bg-light-crystal dark:bg-dark-indigo ${styles.contactCard}`}>
               <h3 className="text-xl font-semibold mb-2">Email</h3>
               <p className="text-dark-indigo dark:text-light-yellow">
                 careerskills@advisor.com
               </p>
             </div>
 
-            <div className="p-6 rounded-xl shadow-lg bg-light-fairy dark:bg-dark-orchid">
+            <div className={`p-6 rounded-xl shadow-lg bg-light-fairy dark:bg-dark-orchid ${styles.contactCard}`}>
               <h3 className="text-xl font-semibold mb-2">LinkedIn</h3>
               <a
                 href="https://linkedin.com/company/career-skills"
-                className="text-dark-indigo underline dark:text-light-yellow hover:opacity-80"
+                className={`text-dark-indigo underline dark:text-light-yellow hover:opacity-80 ${styles.glowLink}`}
               >
                 linkedin.com/company/career-skills
               </a>

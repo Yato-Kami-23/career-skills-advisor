@@ -1,0 +1,9 @@
+.verifyBg {
+  background: linear-gradient(135deg, #ffe3b3 0%, #bde0fe 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .verifyBg {
+    background: linear-gradient(135deg, #3c096c 0%, #5a189a 100%);
+  }
+}

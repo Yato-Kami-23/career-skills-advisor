@@ -1,25 +1,34 @@
 /* src/css/HomePage.module.css */
+
 .homepageGradient {
-    background: linear-gradient(135deg, #ffe3b3 0%, #bde0fe 100%);
+  /* Use Tailwind's custom gradient via config */
+  background-image: theme('backgroundImage.homepage-gradient');
 }
 
-.dark .homepageGradient {
-    background: linear-gradient(135deg, #3c096c 0%, #5a189a 100%);
+:global(.dark) .homepageGradient {
+  background-image: theme('backgroundImage.homepage-gradient-dark');
 }
 
+/* Placeholder image box with pulse animation */
 .imagePlaceholder {
-    border: 2px dashed #cdb4db;
+  animation: pulseGlow 3s infinite;
 }
 
-.dark .imagePlaceholder {
-    border: 2px dashed #7b2cbf;
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(186, 192, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(186, 192, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(186, 192, 255, 0.4);
+  }
 }
 
-.chatbotButtonHover {
-    transition: all 0.3s ease;
-}
-
+/* Chatbot button hover effect */
 .chatbotButtonHover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(123, 44, 191, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }

@@ -1,0 +1,81 @@
+/* src/css/LoginPage.module.css */
+
+/* Background with gradient */
+.loginBackground {
+  background: linear-gradient(135deg, #ffe3b3, #bde0fe);
+}
+
+:global(.dark) .loginBackground {
+  background: linear-gradient(135deg, #3c096c, #5a189a);
+}
+
+/* Card styling */
+.loginCard {
+  background: white;
+  border: 2px solid rgba(255, 200, 221, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(.dark) .loginCard {
+  background: #553769;
+  border: 2px solid rgba(124, 88, 170, 0.5);
+}
+
+.loginCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Input fields */
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+
+.inputField:focus {
+  border-color: #9f99d1;
+  box-shadow: 0 0 6px rgba(159, 153, 209, 0.7);
+}
+
+:global(.dark) .inputField {
+  background: #3c096c;
+  border: 1px solid #7c58aa;
+  color: #f6beb0;
+}
+
+:global(.dark) .inputField:focus {
+  border-color: #d277bd;
+  box-shadow: 0 0 6px rgba(210, 119, 189, 0.8);
+}
+
+/* Submit button */
+.submitButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #dbaad7, #86bada);
+  color: #3c096c;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #f6beb0, #dbaad7);
+  transform: scale(1.05);
+}
+
+:global(.dark) .submitButton {
+  background: linear-gradient(135deg, #7c58aa, #d277bd);
+  color: #ffe3b3;
+}
+
+:global(.dark) .submitButton:hover {
+  background: linear-gradient(135deg, #553769, #7b2cbf);
+}

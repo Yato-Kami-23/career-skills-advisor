@@ -1,0 +1,9 @@
+.assessmentBg {
+  background: linear-gradient(135deg, #ffe3b3 0%, #ffc8dd 50%, #bde0fe 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .assessmentBg {
+    background: linear-gradient(135deg, #3c096c 0%, #5a189a 50%, #7b2cbf 100%);
+  }
+}
