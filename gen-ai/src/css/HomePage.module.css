@@ -1,14 +1,5 @@
 /* src/css/HomePage.module.css */
 
-.homepageGradient {
-  /* Use Tailwind's custom gradient via config */
-  background-image: theme('backgroundImage.homepage-gradient');
-}
-
-:global(.dark) .homepageGradient {
-  background-image: theme('backgroundImage.homepage-gradient-dark');
-}
-
 /* Placeholder image box with pulse animation */
 .imagePlaceholder {
   animation: pulseGlow 3s infinite;

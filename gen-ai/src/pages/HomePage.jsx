@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import styles from '../css/HomePage.module.css'; // Import with styles object
+import styles from "../css/HomePage.module.css"; // Only for custom animations/hover effects
 
 export default function HomePage() {
   return (
-    <div className={`min-h-screen flex flex-col ${styles.homepageGradient} text-dark-indigo dark:bg-dark-indigo dark:text-light-yellow transition-colors duration-500`}>
+    <div className="min-h-screen flex flex-col bg-homepage-gradient dark:bg-homepage-gradient-dark text-dark-indigo dark:text-light-yellow transition-colors duration-500">
       {/* Navbar */}
       <Navbar />
 
@@ -22,7 +22,9 @@ export default function HomePage() {
             and chatbot to build a personalised plan.
           </p>
           <div className="mt-6 flex justify-center">
-            <div className={`h-64 w-96 bg-light-fairy dark:bg-dark-peach rounded-lg flex items-center justify-center shadow-lg ${styles.imagePlaceholder}`}>
+            <div
+              className={`h-64 w-96 bg-light-fairy dark:bg-dark-peach rounded-lg flex items-center justify-center shadow-lg ${styles.imagePlaceholder}`}
+            >
               <span className="text-dark-indigo dark:text-light-yellow">
                 [ Insert Image Here ]
               </span>
@@ -41,7 +43,9 @@ export default function HomePage() {
             recommend learning paths, resources, and how to level up
             step-by-step.
           </p>
-          <button className={`bg-light-honey dark:bg-dark-orchid text-dark-indigo dark:text-light-yellow px-6 py-2 rounded-full shadow hover:opacity-90 transition ${styles.chatbotButtonHover}`}>
+          <button
+            className={`bg-light-honey dark:bg-dark-orchid text-dark-indigo dark:text-light-yellow px-6 py-2 rounded-full shadow hover:opacity-90 transition ${styles.chatbotButtonHover}`}
+          >
             Try the Chatbot
           </button>
         </section>
