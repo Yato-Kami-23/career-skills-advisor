@@ -1,45 +1,88 @@
 /* Wrapper for full page background */
 .chatbotWrapper {
-  @apply min-h-screen flex items-center justify-center bg-light-fairy dark:bg-dark-plum;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f0ff; /* light-fairy fallback */
 }
 
 /* Chat window container */
 .chatContainer {
-  @apply w-full max-w-3xl h-[80vh] flex flex-col bg-white dark:bg-dark-indigo rounded-xl shadow-lg overflow-hidden;
+  width: 100%;
+  max-width: 768px; /* approx 3xl */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 /* Chat history scrollable section */
 .chatHistory {
-  @apply flex-1 overflow-y-auto p-4 space-y-3;
-  scrollbar-width: thin;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
 }
 
 /* Message bubble base */
 .message {
-  @apply px-4 py-2 rounded-lg max-w-[75%] break-words;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 75%;
+  word-break: break-word;
 }
 
 /* User message style */
 .userMessage {
-  @apply bg-light-honey text-dark-indigo self-end rounded-br-none;
+  background-color: #f6beb0; /* light-honey */
+  color: #2d2d6b; /* dark-indigo */
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
 }
 
 /* Bot message style */
 .botMessage {
-  @apply bg-light-crystal text-dark-indigo self-start rounded-bl-none dark:bg-dark-orchid dark:text-light-yellow;
+  background-color: #d0f0fc; /* light-crystal */
+  color: #2d2d6b; /* dark-indigo */
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
 }
 
 /* Input area at the bottom */
 .inputArea {
-  @apply flex items-center gap-2 p-4 border-t border-gray-300 dark:border-gray-600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #d1d5db; /* gray-300 */
 }
 
 /* Text input field */
 .chatInput {
-  @apply flex-grow px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-light-dreamy dark:focus:ring-dark-orchid;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  outline: none;
 }
 
 /* Send button */
 .sendButton {
-  @apply px-4 py-2 rounded-lg bg-light-dreamy dark:bg-dark-orchid text-dark-indigo dark:text-light-yellow font-semibold shadow hover:opacity-90 transition;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #cdb4ff; /* light-dreamy */
+  color: #2d2d6b; /* dark-indigo */
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.sendButton:hover {
+  opacity: 0.9;
 }
