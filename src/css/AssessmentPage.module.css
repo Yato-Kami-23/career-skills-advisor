@@ -1,9 +1,92 @@
+/* Background */
 .assessmentBg {
-  background: linear-gradient(135deg, #ffe3b3 0%, #ffc8dd 50%, #bde0fe 100%);
+  background: linear-gradient(
+    135deg,
+    #ffe8cc 0%,
+    #ffc8dd 50%,
+    #b5d8f7 100%
+  );
+  transition: background 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
   .assessmentBg {
-    background: linear-gradient(135deg, #3c096c 0%, #5a189a 50%, #7b2cbf 100%);
+    background: linear-gradient(
+      135deg,
+      #2a0934 0%,
+      #4b1c65 50%,
+      #7b2cbf 100%
+    );
   }
+}
+
+/* Progress Bar */
+.progressBar {
+  background: #e0e0e0; /* base track */
+  border-radius: 9999px;
+  height: 0.75rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #9f99d1, #7a5af5);
+  transition: width 0.3s ease;
+}
+
+:global(.dark) .progressBar {
+  background: #3a2d55;
+}
+
+:global(.dark) .progressFill {
+  background: linear-gradient(135deg, #d277bd, #7b2cbf);
+}
+
+/* Buttons */
+.assessmentButton {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.assessmentButtonYes {
+  background: #dbaad7;
+  color: #3c096c;
+}
+
+.assessmentButtonYes:hover {
+  background: #f6beb0;
+  transform: translateY(-2px);
+}
+
+.assessmentButtonNo {
+  background: #b5d8f7;
+  color: #3c096c;
+}
+
+.assessmentButtonNo:hover {
+  background: #86bada;
+  transform: translateY(-2px);
+}
+
+/* Dark mode buttons */
+:global(.dark) .assessmentButtonYes {
+  background: #7c58aa;
+  color: #ffe8cc;
+}
+
+:global(.dark) .assessmentButtonYes:hover {
+  background: #d277bd;
+}
+
+:global(.dark) .assessmentButtonNo {
+  background: #553769;
+  color: #ffe8cc;
+}
+
+:global(.dark) .assessmentButtonNo:hover {
+  background: #7b2cbf;
 }

@@ -1,29 +1,27 @@
-/* src/css/LoginPage.module.css */
-
 /* Background with gradient */
 .loginBackground {
-  background: linear-gradient(135deg, #ffe3b3, #bde0fe);
+  background: linear-gradient(135deg, #ffe8cc, #bde0fe); /* softer pastel */
 }
 
 :global(.dark) .loginBackground {
-  background: linear-gradient(135deg, #3c096c, #5a189a);
+  background: linear-gradient(135deg, #2a0934, #4b1c65); /* deeper tones for dark mode */
 }
 
 /* Card styling */
 .loginCard {
   background: white;
-  border: 2px solid rgba(255, 200, 221, 0.5);
+  border: 1px solid rgba(200, 200, 200, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 :global(.dark) .loginCard {
-  background: #553769;
-  border: 2px solid rgba(124, 88, 170, 0.5);
+  background: #392d50;
+  border: 1px solid rgba(180, 140, 210, 0.4);
 }
 
 .loginCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Input fields */
@@ -31,44 +29,45 @@
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   outline: none;
   transition: all 0.25s ease;
   font-size: 1rem;
+  background: #fff;
 }
 
 .inputField:focus {
-  border-color: #9f99d1;
-  box-shadow: 0 0 6px rgba(159, 153, 209, 0.7);
+  border-color: #7a5af5; /* highlight color */
+  box-shadow: 0 0 6px rgba(122, 90, 245, 0.5);
 }
 
 :global(.dark) .inputField {
-  background: #3c096c;
+  background: #2a0934;
   border: 1px solid #7c58aa;
-  color: #f6beb0;
+  color: #ffe8cc;
 }
 
 :global(.dark) .inputField:focus {
   border-color: #d277bd;
-  box-shadow: 0 0 6px rgba(210, 119, 189, 0.8);
+  box-shadow: 0 0 6px rgba(210, 119, 189, 0.6);
 }
 
 /* Submit button */
 .submitButton {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 0.75rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #dbaad7, #86bada);
-  color: #3c096c;
+  background: linear-gradient(135deg, #7a5af5, #86bada);
+  color: #fff;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .submitButton:hover {
-  background: linear-gradient(135deg, #f6beb0, #dbaad7);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a3ec8, #4ba3c7);
+  transform: translateY(-2px);
 }
 
 :global(.dark) .submitButton {
@@ -77,5 +76,5 @@
 }
 
 :global(.dark) .submitButton:hover {
-  background: linear-gradient(135deg, #553769, #7b2cbf);
+  background: linear-gradient(135deg, #5a189a, #9c27b0);
 }
